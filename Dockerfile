@@ -30,6 +30,7 @@ RUN set -e \
     && rmdir webtrees \
     && apk del .build-deps \
     && cp -r /var/www/html/data /var/www/html/data.bak \
+    && chmod 0755 /var/lib/nginx \
     && chown -R www-data /var/www/html \
     && chmod -R g-w /var/www/html*
 
